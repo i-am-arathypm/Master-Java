@@ -142,7 +142,7 @@ class Main{
 
 - Thread class directly represent a thread.
 - Can be created by extending Thread class.
-- Limitaion: Since java does not support Multi Inheritance , we cannot extend another class if you extend Thread.
+- Limitaion: Since java does not support Multiple Inheritance , we cannot extend another class if you extend Thread.
 
 
 ## Runnable 
