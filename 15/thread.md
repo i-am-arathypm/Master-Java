@@ -127,7 +127,7 @@ class Main{
         t1.setPriority(Thread.MAX_PRIORITY);
         t1.start();
         try{
-            t1.join();
+            t1.join(); // wait for t1 to finish
         }catch(InterruptedException e){}
         
         t2.start();
