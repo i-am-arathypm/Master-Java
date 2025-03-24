@@ -1,4 +1,4 @@
-Final Keyword
+# Final Keyword
 
 In c++ , we use -> const
 
@@ -7,12 +7,12 @@ Final keyword can be used with
 2.Method
 3.Class
 
-1.Varible 
+## 1.Varible 
     final int a = 10; //const value assigned to a 
     a = 9; // not possible
 
 
-2.Method
+## 2.Method
     When we make a method final, no one can override it.
 
     class Calc{
@@ -58,7 +58,7 @@ class Calc{
 
 
 
-3.Class
+## 3.Class
     Once you make the class final, you stop the inheritance. No one can extend it.
 
     final class Calc{
