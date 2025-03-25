@@ -2,10 +2,10 @@
 
 In c++ , we use -> const
 
-Final keyword can be used with 
-1.Variable
-2.Method
-3.Class
+Final keyword can be used with  
+ 1.Variable  
+ 2.Method  
+ 3.Class  
 
 ## 1.Varible 
    ```cpp
@@ -84,7 +84,7 @@ int i = int (d);  // output : 4
 
 ## Upcasting
 Upcasting always happens automtically.
-* we can only access methods in parent class.
+* we can only access methods in parent class and overridden methods in childclass.
 * With upcasting, we can create one method which operaters on many subclasses.
 ## Downcasting
 * We should downcast a variable manually.
@@ -159,6 +159,41 @@ public static void main(String[] args)
          obj2.showChild()
       }
   }
+  ```
+
+```cpp
+class Pen{
+   
+}
+
+class Sketchpen extends Pen{
+
+}
+
+class Inkpen extends Pen{
+
+}
+
+
+class Main{
+static Pen price(int price){
+if(price == 5){
+   return new SketchPen();
+}
+else 
+{
+   return new InkPen();
+}
+
+}
+
+   public static void main(String[] args){
+      Pen P = price(5) // Pen P = newSketchPen();
+
+   }
+
+}
+ ```
   
 
 # Wrapper class
