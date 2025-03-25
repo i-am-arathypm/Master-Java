@@ -140,6 +140,7 @@ public static void main(String[] args)
 ```
 
 * instanceof - returns a boolean value.
+* The instanceof keyword in Java is used to check whether an object is an instance of a specific class or subclass.
 
   ```cpp
   class Parent{
