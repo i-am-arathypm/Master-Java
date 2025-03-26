@@ -1,0 +1,117 @@
+What is an Exception?
+
+An exception is an event that disrupts the normal flow of a program during execution. It occurs due to errors such as invalid input, division by zero, or accessing an array out of bounds. In Java, Python, C++, and other languages, exceptions are handled to prevent program crashes.
+
+
+---
+
+Exception Handling using try-catch
+
+Exception handling allows a program to continue executing even when an error occurs. The try-catch block is used to catch exceptions and handle them appropriately.
+
+Syntax:
+
+try {
+    // Code that may throw an exception
+} catch (ExceptionType e) {
+    // Code to handle the exception
+}
+
+Example:
+
+public class ExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int result = 10 / 0; // This will cause an exception
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero.");
+        }
+    }
+}
+
+Output:
+Cannot divide by zero.
+
+
+---
+
+Try with Multiple Catch Blocks
+
+A try block can have multiple catch blocks to handle different types of exceptions.
+
+Example:
+
+public class MultipleCatchExample {
+    public static void main(String[] args) {
+        try {
+            int arr[] = new int[5];
+            arr[10] = 50; // ArrayIndexOutOfBoundsException
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception occurred.");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Index Out of Bounds Exception occurred.");
+        } catch (Exception e) {
+            System.out.println("Some other exception occurred.");
+        }
+    }
+}
+
+Output:
+Array Index Out of Bounds Exception occurred.
+
+Note: The order of catch blocks matters. Always catch specific exceptions before general ones (like Exception).
+
+
+---
+
+Exception Hierarchy in Java
+
+Java's exception classes are organized in a hierarchy under Throwable.
+
+Throwable
+         /         \
+      Error      Exception
+                 /        \
+  IOException   RuntimeException
+                 /            \
+      ArithmeticException   NullPointerException
+
+Main Categories:
+
+1. Checked Exceptions – Must be handled at compile time (e.g., IOException, SQLException).
+
+
+2. Unchecked Exceptions – Occur at runtime (e.g., NullPointerException, ArithmeticException).
+
+
+3. Errors – Serious problems that cannot be handled (e.g., OutOfMemoryError).
+
+
+
+
+---
+
+The throw Keyword
+
+The throw keyword is used to explicitly throw an exception in Java.
+
+Example:
+
+public class ThrowExample {
+    static void validate(int age) {
+        if (age < 18) {
+            throw new IllegalArgumentException("Not eligible to vote");
+        }
+        System.out.println("Eligible to vote");
+    }
+
+    public static void main(String[] args) {
+        validate(16); // This will throw an exception
+    }
+}
+
+Output:
+Exception in thread "main" java.lang.IllegalArgumentException: Not eligible to vote
+
+
+-
